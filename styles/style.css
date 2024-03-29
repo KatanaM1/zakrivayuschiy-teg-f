@@ -17,4 +17,326 @@
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  font-family: var(--basic-family);
+  font-variation-settings: 'wght' var(--wght);
+  background-color: var(--back-color);
+  color: var(--accent-color);
+  background-attachment: fixed;
+  background: var(--bg-img) center / cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: end;
+  row-gap: 1.5rem;
+  margin: 6.3rem 0;
+  text-transform: uppercase;
+  border: 2px solid var(--accent-color);
+  padding: clamp(7.5rem, 6.3462rem + 4.9231vw, 8.5rem) 0 25px;
+  background: var(--back-color);
+  font-family: var(--accent-family);
+}
+
+.content-size {
+  width: var(--width-size);
+}
+
+.header-logo {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-tittle {
+  font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
+}
+
+.header-text {
+  font-size: clamp(0.875rem, 0.7143rem + 0.8036vw, 1.4375rem);
+  font-variation-settings: "wght" var(--wdth-bold);
+}
+
+button {
+  font-size: 0.9rem;
+  background: transparent;
+  cursor: pointer;
+  outline: none;
+  padding: 0;
+  border: 2px solid var(--accent-color);
+  font-family: var(--accent-family);
+}
+
+.theme-menu__button {
+  font-variation-settings: "wght" var(--wght);
+  line-height: 0.88rem;
+  border: none;
+  position: relative;
+  display: flex;
+  gap: 0.25rem;
+  text-transform: uppercase;
+  transition: opacity .3s ease;
+}
+
+.theme-menu__item:not(:last-of-type) {
+  margin-bottom: 0.9rem;
+}
+
+.theme-menu__button:before {
+  content: "▶";
+  display: block;
+  width: 100%;
+  animation: theme-active .5s infinite ease-in-out alternate;
+}
+
+.theme-menu__button:focus-visible::after {
+  transform: scaleX(1);
+}
+
+.theme-menu__button:is(:hover,:focus,:focus-visible,:disabled) {
+  opacity: 0.6;
+}
+
+.theme-menu__button:is(:disabled) {
+  cursor: default;
+  pointer-events: none;
+}
+
+.theme-menu__button:not(:disabled):before {
+  opacity: 0;
+}
+
+.theme-menu__button:after {
+  content: "";
+  display: block;
+  width: calc(100% - 1.125rem);
+  height: 2px;
+  position: absolute;
+  bottom: -2px;
+  right: 0;
+  background: var(--accent-color);
+  opacity: 1;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform .3s ease;
+}
+
+.cards {
+  display: grid;
+  gap: 3.2rem;
+}
+
+.card {
+  border: 2px solid var(--accent-color);
+  background: var(--back-color);
+}
+
+.card-tittle {
+  font-size: 1.12rem;
+  font-variation-settings: 'wght' var(--wdth-bold);
+  line-height: 1.38rem;
+  padding: 0.25rem 0.625rem;
+}
+
+.card-image {
+  display: grid;
+  overflow: hidden;
+  border-top: 2px solid var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+}
+
+.img {
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+  aspect-ratio: 1/1;
+  grid-area: 1/2;
+}
+
+.card-tag {
+  padding: 1.625rem;
+  justify-self: end;
+  mix-blend-mode: hard-light;
+  grid-area: 1/2;
+  font-family: var(--accent-family);
+  opacity: 0.5;
+  text-transform: uppercase;
+  font-size: 0.88rem;
+  text-shadow: -1px 0 var(--back-color),
+  0 1px var(--back-color),
+  1px 0 var(--back-color),
+  0 -1px var(--back-color);
+}
+
+@media (width <= 375px) {
+  .card-tag {
+      padding: 1.25rem 0.75rem;
+  }
+}
+
+.discet-container {
+  max-width: 335px;
+  margin: 3.25rem auto 6.25rem;
+}
+
+.discet-container .floppy {
+  width: 21px;
+  height: 21px;
+  mix-blend-mode: difference;
+}
+
+@media (width < 376px) {
+  .discet-container {
+      max-width: 306px;
+  }
+
+  .discet-container .floppy {
+      width: 29px;
+      height: 28px;
+  }
+}
+
+.save-button {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      background: var(--back-color);
+      min-height: 55px;
+}
+
+@media (width < 376px) {
+  .save-button {
+      flex-direction: column;
+      min-height: 80px;
+  }
+}
+
+.discet-window[open] {
+  background: var(--back-color);
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 1.75rem;
+}
+
+@media (width < 376px) {
+  .discet-window[open] {
+      min-width: 341px;
+  }
+}
+
+.discet-window::backdrop {
+  background-color: rgb(0, 0, 0, 0.75);
+}
+
+.discet-window :is(.floppy) {
+  width: 39px;
+  height: 39px;
+}
+
+.discet-window__tittle {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+}
+
+.discet-window__text {
+  font-family: var(--accent-family);
+  max-width: 234px;
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-size: 0.88rem;
+  font-variation-settings: "wght" var(--wght-bold);
+  color: var(--accent-color);
+}
+
+@media (width < 376px) {
+  .discet-window__text {
+      max-width: 200px;
+  }
+}
+
+.discet-window__dialog {
+  width: 100%;
+}
+
+.discet-window__button {
+  width: 100%;
+  min-height: 38px;
+  text-transform: uppercase;
+  margin-top: 1.625rem;
+}
+
+.text-card {
+  font-size: 1.13rem;
+  font-variation-settings: "wght" var(--wdth);
+  line-height: 1.31rem;
+  padding: 1.625rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.625rem;
+}
+
+.content-like {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.card__icon-button {
+  transition: border-color 0.3s ease;
+}
+
+.card__icon-button:not(:focus-visible) {
+  border-color: transparent;
+}
+
+.card__like-button {
+  width: min(130px, 100%);
+  padding: 0.625rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.un-like {
+  position: relative;
+  overflow: hidden;
+  transition: box-shadow .3s ease;
+}
+
+.text_like {
+  position: relative;
+  z-index: 2;
+  color: var(--like-color);
+}
+
+.un-like:before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  transition: transform .5s ease-in-out;
+  background: var(--accent-color);
+  z-index: 0;
+}
+
+.un-like:hover:before {
+  transform: translateX(0%);
+}
+
+.un-like:focus-visible {
+  box-shadow: 2px 2px var(--accent-color);
+}
+
+.text_like {
+  mix-blend-mode: difference;
+}
+
