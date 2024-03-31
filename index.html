@@ -14,6 +14,7 @@
     <script src="./scripts/set-theme.js"></script>
     <link type="Image/x-icon" href="./svg/favicon.svg" rel="icon">
     <link href="./images/apple-touch-icon.png" rel="apple-touch-icon">
+    <link rel="icon" href="./images/favicon.ico" type="image/ico">
   </head>
   <body class="page">
     <header class="header content-size">
@@ -52,11 +53,11 @@
         <ul class="cards">
           <li>
             <article class="card">
-              <h3 class="card-tittle">
+              <h2 class="card-tittle">
                 Фритрек и нулевой спринт: Подготовка к работе
-              </h3>
+              </h2>
               <div class="card-image">
-                <img src="./images/image1.jpg" class="img">
+                <img src="./images/image1.jpg" class="img" alt="простая">
                 <div class="card-tag">&lt;/html&gt;</div>
               </div>
               <div class="text-card">
@@ -96,11 +97,11 @@
           </li>
           <li>
             <article class="card">
-              <h3 class="card-tittle">
+              <h2 class="card-tittle">
                 1 спринт: Я — чистый лист
-              </h3>
+              </h2>
               <div class="card-image">
-                <img src="./images/image2.jpg" class="img">
+                <img src="./images/image2.jpg" class="img" alt="темная">
                 <div class="card-tag">&lt;/html&gt;</div>
               </div>
               <div class="text-card">
@@ -140,11 +141,11 @@
           </li>
           <li>
             <article class="card">
-              <h3 class="card-tittle">
+              <h2 class="card-tittle">
                 1 спринт: А если не получится?
-              </h3>
+              </h2>
               <div class="card-image">
-                <img src="./images/image3.jpg" class="img">
+                <img src="./images/image3.jpg" class="img" alt="цветная">
                 <div class="card-tag">&lt;/html&gt;</div>
               </div>
               <div class="text-card">
@@ -184,11 +185,11 @@
           </li>
           <li>
             <article class="card">
-              <h3 class="card-tittle">
+              <h2 class="card-tittle">
                 2 спринт: Погоня за идеалом
-              </h3>
+              </h2>
               <div class="card-image">
-                <img src="./images/image4.jpg" class="img">
+                <img src="./images/image4.jpg" class="img" alt="смешанная">
                 <div class="card-tag">&lt;/html&gt;</div>
               </div>
               <div class="text-card">
@@ -228,11 +229,11 @@
           </li>
           <li>
             <article class="card">
-              <h3 class="card-tittle">
+              <h2 class="card-tittle">
                 2 спринт: О тех, кто рядом
-              </h3>
+              </h2>
               <div class="card-image">
-                <img src="./images/image5.jpg" class="img">
+                <img src="./images/image5.jpg" class="img" alt="вывернутая">
                 <div class="card-tag">&lt;/html&gt;</div>
               </div>
               <div class="text-card">
@@ -272,11 +273,11 @@
           </li>
           <li>
             <article class="card">
-              <h3 class="card-tittle">
+              <h2 class="card-tittle">
                 3 спринт: Обходные стратегии
-              </h3>
+              </h2>
               <div class="card-image">
-                <img src="./images/image6.jpg" class="img">
+                <img src="./images/image6.jpg" class="img" alt="ночь">
                 <div class="card-tag">&lt;/html&gt;</div>
               </div>
               <div class="text-card">
@@ -316,11 +317,11 @@
           </li>
           <li>
             <article class="card">
-              <h3 class="card-tittle">
+              <h2 class="card-tittle">
                 3 спринт: Когда опускаются руки
-              </h3>
+              </h2>
               <div class="card-image">
-                <img src="./images/image7.jpg" class="img">
+                <img src="./images/image7.jpg" class="img" alt="размытая">
                 <div class="card-tag">&lt;/html&gt;</div>
               </div>
               <div class="text-card">
@@ -360,11 +361,11 @@
           </li>
           <li>
             <article class="card">
-              <h3 class="card-tittle">
+              <h2 class="card-tittle">
                 «Сейчас я здесь»
-              </h3>
+              </h2>
               <div class="card-image">
-                <img src="./images/image8.jpg" class="img">
+                <img src="./images/image8.jpg" class="img" alt="кислотная">
                 <div class="card-tag">&lt;/html&gt;</div>
                 </div>
                 <div class="text-card">
@@ -422,7 +423,7 @@
               <p class="discet-window__text">Вставьте дискету, чтобы продолжить</p>
           </div>
           <form class="discet-window__dialog" method="dialog">
-              <button type="button" class="button discet-window__button un-like"><span class="text_like button__text">ок</span></button>
+              <button type="button" onclick="window['save-modal'].close()" class="button discet-window__button un-like"><span class="text_like button__text">ок</span></button>
           </form>
         </dialog>
       </section>

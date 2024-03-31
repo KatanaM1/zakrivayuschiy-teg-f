@@ -2,9 +2,9 @@
 :root {
     --basic-family: 'Inter-Variable', sans-serif;
     --accent-family: 'PressStart2P', fantasy;
-    --wdth: 400;
-    --wdth-bold: 700;
-    --back-color: #FFFFFF;
+    --wght: 400;
+    --wght-bold: 700;
+    --bg-color: #FFFFFF;
     --accent-color: #000000;
     --heart-color: red;
     --bg-img: repeating-linear-gradient(to bottom, #d3d3d3 0px 2px, transparent 2px 4px),
