@@ -60,7 +60,6 @@
 
 .header-text {
   font-size: clamp(0.875rem, 0.7143rem + 0.8036vw, 1.4375rem);
-  font-variation-settings: "wght" var(--wdth-bold);
 }
 
 button {
@@ -104,7 +103,6 @@ button {
 }
 
 .theme-menu__button:is(:disabled) {
-  cursor: default;
   pointer-events: none;
 }
 
@@ -168,7 +166,7 @@ button {
   opacity: 0.5;
   text-transform: uppercase;
   font-size: 0.88rem;
-  text-shadow: -1px 0 var(--back-color),
+  text-shadow: 0 0 1px var(--back-color),
   0 1px var(--back-color),
   1px 0 var(--back-color),
   0 -1px var(--back-color);
@@ -183,6 +181,7 @@ button {
 .discet-container {
   max-width: 335px;
   margin: 3.25rem auto 6.25rem;
+  color: black;
 }
 
 .discet-container .floppy {
@@ -210,6 +209,8 @@ button {
       gap: 0.5rem;
       background: var(--back-color);
       min-height: 55px;
+      fill: red;
+      color: red;
 }
 
 @media (width < 376px) {
@@ -316,6 +317,7 @@ button {
   position: relative;
   z-index: 2;
   color: var(--like-color);
+  mix-blend-mode: difference;
 }
 
 .un-like:before {
@@ -336,7 +338,6 @@ button {
   box-shadow: 2px 2px var(--accent-color);
 }
 
-.text_like {
-  mix-blend-mode: difference;
+.floppy:hover {
+  fill: var(--accent-color);
 }
-

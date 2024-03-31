@@ -77,23 +77,23 @@
 }
 
 .like-icon.is-liked .main-body {
-    fill: red;
+    fill: var(--heart-color);
 }
 
 .like-icon.is-liked .contour {
-    fill: red;
+    fill: var(--heart-color);
 }
 
 .like-icon.is-liked .core {
-    fill: red;
+    fill: var(--heart-color);
 }
 
 .like-icon:active .main-body {
-    fill: red;
+    fill: var(--heart-color);
 }
 
 .like-icon:active .core {
-    fill: red;
+    fill: var(--heart-color);
 }
 
 .like-icon.is-liked .sparks {
